@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['agregar_carrito'])) {
        <nav class="navbar bg-info border-bottom border-body sticky-top">
             <div name="BarraSuperior" style="text-align: center;" class="container-fluid">
                 <div class="d-flex">
-                    <a href="#" onclick="window.history.back(); return false;"><button class="btn btn-danger"><i class="fa-solid fa-arrow-left"></i></button></a>
+                    <a href="../UsuariosPrincipal.php"><button class="btn btn-danger"><i class="fa-solid fa-arrow-left"></i></button></a>
                 </div>
                 <div class="d-flex">
                     <a href="../Carrito.php"><button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i></button></a>
@@ -142,12 +142,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['agregar_carrito'])) {
 
                 // set de imágenes
                 $imagenes = [
-                    1 => "Chicken.jpg",
-                    2 => "Chila_chicken.jpeg",
-                    3 => "molletes.jpg",
-                    4 => "Pizaa.jpg",
-                    5 => "coca.jpg",
-                    6=> "mirinda.jpg"
+                    1 => "Chicken tenders.jpg",
+                    2 => "Chilaquiles con chicken tenders.jpg",
+                    3 => "Molletes.jpg",
+                    4 => "Pizza.jpg",
+                    5 => "Coca.jpg",
+                    6=> "Mirinda.jpg"
                 ];
                 
                 if ($result_productos->num_rows > 0) {
