@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['agregar_carrito'])) {
        <nav class="navbar bg-info border-bottom border-body sticky-top">
             <div name="BarraSuperior" style="text-align: center;" class="container-fluid">
                 <div class="d-flex">
-                    <a href="#" onclick="window.history.back(); return false;"><button class="btn btn-danger"><i class="fa-solid fa-arrow-left"></i></button></a>
+                    <a href="../UsuariosPrincipal.php"><button class="btn btn-danger"><i class="fa-solid fa-arrow-left"></i></button></a>
                 </div>
                 <div class="d-flex">
                     <a href="../Carrito.php"><button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i></button></a>
@@ -142,12 +142,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['agregar_carrito'])) {
 
                 // set de imágenes
                 $imagenes = [
-                    1 => "tacos.jpeg",
-                    2 => "HotDog.jpg",
-                    3 => "Licuado_Platano.jpeg",
-                    4 => "Malteada.jpg",
-                    5 => "Agua_Jamaica.jpg",
-                    6=> "Agua_horchata.jpg"
+                    1 => "Orden de tacos de colores.jpg",
+                    2 => "Hot Dogs.jpg",
+                    3 => "Licuado de platano.jpg",
+                    4 => "Malteada de chocolate.jpg",
+                    5 => "Agua de jamaica.jpg",
+                    6=> "Agua de horchata.jpg"
                 ];
                 
                 if ($result_productos->num_rows > 0) {

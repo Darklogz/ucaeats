@@ -20,13 +20,14 @@ if (!isset($_POST['rating'], $_POST['comment'])) {
     die('Por favor, complete la calificación y el comentario.');
 }
 
+$usuario = $_SESSION['name'];
 $calificacion = intval($_POST['rating']);
 $descripcion = mysqli_real_escape_string($conexion, $_POST['comment']);
 
 // Insertar la opinión en la base de datos (solo calificacion y descripcion)
-$sql = "INSERT INTO opinion (calificacion, descripcion) VALUES (?, ?)";
+$sql = "INSERT INTO opinion (usuario, calificacion, descripcion) VALUES (?,?,?)";
 $stmt = $conexion->prepare($sql);
-$stmt->bind_param('is', $calificacion, $descripcion);
+$stmt->bind_param('sis', $usuario,$calificacion, $descripcion);
 if ($stmt->execute()) {
     echo "<script>alert('Gracias por su opinión.'); window.location.href='UsuariosPrincipal.php';</script>";
 } else {

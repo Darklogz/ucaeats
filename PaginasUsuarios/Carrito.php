@@ -103,7 +103,7 @@ $total = $subtotal - $descuento;
                     <div class="Item" style="display: grid; grid-template-rows:100px,20px; background:white;">
                         <div class="FoodCard" style="display: flex;">
                             <figure class="FoodImage"style="width:150px; height:150px;  ">
-                                <img src="./Images/<?php echo strtolower(str_replace(' ', '', $item['nombre'])); ?>.jpg" style="width:100%; height:100%; object-fit: cover;" onerror="this.src='./Images/molletes.jpg'">
+                              <img src="./Images/<?php echo rawurlencode(strtolower($item['nombre'])); ?>.jpg" style="width:100%; height:100%; object-fit: cover;" onerror="this.src='./Images/molletes.jpg'">
                             </figure>
                             <div class="FoodDescription">
                                 <h2><?php echo htmlspecialchars($item['nombre']); ?></h2>

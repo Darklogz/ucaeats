@@ -94,7 +94,7 @@ if (!isset($_SESSION['name'])) {
                 <h1>Reseñas</h1>
                 <!-- parte del comentario -->
                 <div class="review-page-group">
-                        <input placeholder="" type="text" value="<?php echo htmlspecialchars($_SESSION['name']);?>" disabled>
+                        <input id="usuario" name="usuario" placeholder="" type="text" value="<?php echo htmlspecialchars($_SESSION['name']);?>" disabled>
                         <label for="name">Usuario</label>
                 </div>
                 <!-- Estrellas de calificacion -->
