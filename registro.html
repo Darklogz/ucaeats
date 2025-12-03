@@ -49,13 +49,19 @@
 <script>
 function validarFormulario() {
     const usuario = document.getElementById("usuario").value;
+    const contrasena = document.getElementById("telefono").value;
     const telefono = document.getElementById("telefono").value;
 
     const regexUsuario = /^[A-Za-z0-9]+$/;
+    const regexContrasena = /^[A-Za-z0-9]+$/;
     const regexTelefono = /^[0-9]+$/;
 
     if (!regexUsuario.test(usuario)) {
         alert("El usuario solo puede contener letras y números.");
+        return false;
+    }
+        if (!regexContrasena.test(password)) {
+        alert("La contraseña solo puede contener letras y números.");
         return false;
     }
 
